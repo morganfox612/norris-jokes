@@ -6,9 +6,12 @@ class ChuckJokes
   def initialize(joke_categories)
     @joke_categories = joke_categories
     def help
-      puts "Please enter ruby app.rb (id number) to get joke by id"
+      puts "Please enter ruby app.rb 'id number' to get joke by id"
+      puts "Ex: ruby app.rb 47"
       puts "Please enter ruby app.rb (First name, Last name) to replace name in joke"
-      puts "Please enter ruby app.rb (random) to get joke by random"
+      puts "Ex: ruby app.rb Morgan Fox"
+      puts "Please enter ruby app.rb 'random' to get joke by random"
+      puts "Ex: ruby app.rb random"
 
     end
 
@@ -23,6 +26,7 @@ class ChuckJokes
     def replace_name(name)
       joke = ChuckNorris::JokeFinder.get_joke(first_name: "#{name[0]}", last_name: "#{name[1]}")
       puts joke.joke
+      puts joke.id
 
 
     end
