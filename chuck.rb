@@ -21,7 +21,6 @@ class ChuckJokes
     end
 
     def replace_name(name)
-      # name = name.split
       joke = ChuckNorris::JokeFinder.get_joke(first_name: "#{name[0]}", last_name: "#{name[1]}")
       puts joke.joke
 
